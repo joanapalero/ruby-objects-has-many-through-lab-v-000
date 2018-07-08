@@ -12,10 +12,6 @@ class Artist
     @@all
   end
   
-  def save
-    @@all << self
-  end
-  
   def new_song(name, genre)
     Song.new(name, self, genre)
   end
@@ -27,7 +23,7 @@ class Artist
   end
   
   def genres 
-    self.songs.collect do |songs|
+    songs.collect do |songs|
       songs.genre 
     end
   end
