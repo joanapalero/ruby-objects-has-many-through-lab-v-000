@@ -12,10 +12,6 @@ class Genre
     @@all
   end
   
-  def save
-    @@all << self
-  end
-  
   def songs 
     Song.all.select do |i|
       i.genre == self
