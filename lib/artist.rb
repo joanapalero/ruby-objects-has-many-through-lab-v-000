@@ -24,6 +24,7 @@ class Artist
     Song.all.select.do |i|
       i.artist == self
     end
-    
+  end
+  
     
 end
